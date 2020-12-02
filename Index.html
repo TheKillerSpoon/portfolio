@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boe-MS</title>
+  </head>
+  <body>
+    <!-- GRAFIK PÅ SKÆRMEN, HTML-ELEMENTER  -->
+    <img src="images/startuser.png" alt="user picture" id="user">
+    <h1 id="username"></h1>
+    
+    <div id="userline">
+        <div>
+            <button id="addfriend" class="button"><img src="images/friend.png" alt="" width="25"></button>
+        </div>
+        <div>
+            <button id="givexp" class="button">XP</button>
+        </div>
+        <div>
+            <button id="makegroup" class="button"><img src="images/group.png" alt="" width="25"></button>
+        </div>
+
+    </div>
+        <div>
+            <div id="xpcontainer">
+                <div class="container">
+                    <div class="skills" id="xp"></div>
+                </div>
+            </div>
+        </div>
+        
+    
+
+
+
+    <div id="friendlist">
+        
+        <div id="friendscontainer">
+            <div>
+                <img src="images/friendpic.png" alt="friend picture" id="friendpic">
+            </div>
+            <div>
+                <h1 id="friends">friend</h1>
+                <h3 id="friendmessage">Start a new conversation</h1>
+            </div>
+        </div>
+
+        <div id="friendscontainer" onclick="redirect()">
+            <div>
+                <img src="images/friendpic.png" alt="friend picture" id="friendpic">
+            </div>
+            <div>
+                <h1 id="friends">friend</h1>
+                <h3 id="friendmessage">Start a new conversation</h1>
+            </div>
+        </div>
+        <div id="friendscontainer">
+            <div>
+                <img src="images/friendpic.png" alt="friend picture" id="friendpic">
+            </div>
+            <div>
+                <h1 id="friends">friend</h1>
+                <h3 id="friendmessage">Start a new conversation</h1>
+            </div>
+        </div>
+    </div>
+    <!---------------------------------------->
+  </body>
+
+  <script>
+    // KODEN SOM STYRER LOGIK, JAVASCRIPT //
+    function redirect () {
+        location.replace("https://oese-messenger.asgernielsen.me");
+    }
+    var username = window.prompt("What is your name?");
+
+        document.getElementById("username").innerHTML = username
+
+    var xphave = 0;
+    var xpneed = 100;
+    var xpprocent = xphave / xpneed * 100;
+    
+    document.getElementById("xp").innerHTML = xpprocent + "%";
+
+    var xpget = document.getElementById("givexp");
+
+    xpget.onclick = function giveXP () {
+        xphave = xphave + 1;
+        xpprocent = xphave / xpneed * 100;
+        
+        document.getElementById("xp").innerHTML = xpprocent + "%";
+        document.getElementById("xp").style = "width:" + xpprocent +"%;";
+    }
+    //------------------------------------//
+  </script>
+  <style>
+    /* STIL OG DESIGN AF HTML-ELEMENTER, CSS */
+    @import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+    body {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        align-items: center;
+        margin: 0;
+    }
+
+    .button {
+        width:100px;
+        height:50px;
+        text-align:center;
+    }
+    
+    #addfriend:hover {
+        background-color: #dbdbdb;
+        color: black;
+    }
+
+    #addfriend {    
+        background-color: white;
+        border: solid gray 2px;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    #givexp {
+        background-color: white;
+        border: solid gray 2px;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    #givexp:hover {
+        background-color: #dbdbdb;
+        color: black;
+    }
+
+    #makegroup:hover {
+        background-color: #dbdbdb;
+        color: black;
+    }
+
+    #makegroup {
+        background-color: white;
+        border: solid gray 2px;
+        color: black;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    #userline {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width:350px;
+    }
+
+    #userline > div {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:140px;
+    }
+
+    #friendlist {
+        border:solid black 3px;
+        border-radius: 15px;
+        margin-top: 40px;
+        max-height: 300px;
+        overflow-y: scroll;
+
+    }
+
+    #friendscontainer {
+        border:solid black 1px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 325px;
+        border-radius: 10px;
+        margin: 2.5px;
+
+    }
+
+
+    #friendpic {
+        width: 100px;
+        border-radius: 75px;
+    }
+
+    #friendmessage {
+        color: lightgray;
+        font-family: 'Nerko One', cursive;
+    }
+
+    #friends {
+        color: black;
+        font-family: 'Nerko One', cursive;
+    }
+
+    .container {
+        width: 50vw;
+        background-color: gray;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .skills {
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-right: 5px;
+        color: red;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+    }
+
+    #xpcontainer {
+        width:100%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        margin-top:25px;
+    }
+
+    #xp {
+        width: 0%; 
+        background-color: #03ffea;
+    }
+
+    #user {
+        width: 150px;
+        border-radius: 100%;
+        border-style: solid;
+        margin: 0px;
+    }
+
+    #xpbar {
+        width: 200px;
+        display: flex;
+    }
+
+    #username {
+        size: 90px;
+        color: black;
+        font-family: 'Nerko One', cursive;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        margin: 0px;
+    }
+
+    /*---------------------------------------*/
+  </style>
+</html>
