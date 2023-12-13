@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Home</title>
+        </head>
+<body>
+
+    <div>
+        <nav>
+            <a>Home</a>
+            <a href="C:/Users/kaspe/GF1/Portfolio/1Intro.html">Intro</a>
+            <a href="C:/Users/kaspe/GF1/Portfolio/2Læreplads.html">Læreplads</a>
+            <a href="C:/Users/kaspe/GF1/Portfolio/3Arbejdskultur.html">Arbejdskultur</a>
+            <a href="C:/Users/kaspe/GF1/Portfolio/4Kolding.html">Kolding</a>
+            <a href="C:/Users/kaspe/GF1/Portfolio/5Gys.html">Gys</a>
+            <a href="C:/Users/kaspe/GF1/Portfolio/6Innovation.html">Innovation</a>
+            <a href="C:/Users/kaspe/GF1/Portfolio/7Uddannelsesvalg.html">Uddannelsesvalg</a>
+            <a href="C:/Users/kaspe/GF1/Portfolio/8Sundhed.html">Sundhed</a>
+            <div class="animation start-home"></div>
+        </nav>
+    </div>
+
+    <div class="gradient">
+        <div class="middle-text">
+            <div class="top-text">
+                <h1>HOME</h1>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<style>
+    /* Body */
+    body {
+        margin: 0px;
+        font-size: 12px;
+        font-family: sans-serif;
+        background-color: #123c69;
+    }
+
+    /* Content box */
+
+    .top-text {
+        position: absolute;
+        text-align: center;
+        left: 50%;
+
+    }
+
+    .top-text h1 {
+        margin: 0px;
+    }
+
+
+    /* Navigation Bar */
+    nav {
+        position: relative;
+        height: 7.5vh;
+        text-align: center;
+        background-color: #123c69;
+        border-radius: 8px;
+        font-size: 0;
+    }
+
+    nav a {
+        line-height: 50px;
+        height: 100%;
+        font-size: 15px;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+
+    nav a:active {
+        background-color: #15467a;
+        box-shadow: 10px 10px 5px rgba(0,0,0,0.24) inset;
+    }
+
+    nav .animation {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        z-index: 0;
+        transition: all .5s ease 0s;
+        border-radius: 8px;
+    }
+
+    a:nth-child(1) {
+        width: 5vw;
+        cursor: not-allowed;
+    }
+    a:nth-child(2) {
+        width: 5vw;
+    }
+    a:nth-child(3) {
+        width: 8vw;
+    }
+    a:nth-child(4) {
+        width: 10vw;
+    }
+    a:nth-child(5) {
+        width: 7vw;
+    }
+    a:nth-child(6) {
+        width: 4vw;
+    }
+    a:nth-child(7) {
+        width: 8vw;
+    }
+    a:nth-child(8) {
+        width: 12vw;
+    }
+    a:nth-child(9) {
+        width: 7vw;
+    }
+
+    /*pressed button*/
+
+    nav a:nth-child(1) {
+        background-color: #ac3b61;
+        box-shadow: 10px 10px 5px rgba(0,0,0,0.48) inset;
+    }
+
+    /*Nav bar animation*/
+
+    nav.start-home, a:nth-child(2):hover~.animation {
+        width: 5vw;
+        left: 22%;
+        background-color: #15467a;
+        box-shadow: 0 0px 16px 0 rgba(0,0,0,0.24);
+    }
+    nav.start-home, a:nth-child(3):hover~.animation {
+        width: 8vw;
+        left: 27%;
+        background-color: #15467a;
+        box-shadow: 0 0px 16px 0 rgba(0,0,0,0.24);
+    }
+    nav.start-home, a:nth-child(4):hover~.animation {
+        width: 10vw;
+        left: 35%;
+        background-color: #15467a;
+        box-shadow: 0 0px 16px 0 rgba(0,0,0,0.24);
+    }
+    nav.start-home, a:nth-child(5):hover~.animation {
+        width: 7vw;
+        left: 45%;
+        background-color: #15467a;
+        box-shadow: 0 0px 16px 0 rgba(0,0,0,0.24);
+    }
+    nav.start-home, a:nth-child(6):hover~.animation {
+        width: 4vw;
+        left: 52%;
+        background-color: #15467a;
+        box-shadow: 0 0px 16px 0 rgba(0,0,0,0.24);
+    }
+    nav.start-home, a:nth-child(7):hover~.animation {
+        width: 8vw;
+        left: 56%;
+        background-color: #15467a;
+        box-shadow: 0 0px 16px 0 rgba(0,0,0,0.24);
+    }
+    nav.start-home, a:nth-child(8):hover~.animation {
+        width: 12vw;
+        left: 64%;
+        background-color: #15467a;
+        box-shadow: 0 0px 16px 0 rgba(0,0,0,0.24);
+    }
+    nav.start-home, a:nth-child(9):hover~.animation {
+        width: 7vw;
+        left: 76%;
+        background-color: #15467a;
+        box-shadow: 0 0px 16px 0 rgba(0,0,0,0.24);
+    }
+
+    /* Content-Box  */
+    .middle-text {
+        width: 90vw;
+        height: 83.25vh;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin: 0;
+        position: absolute;
+        top: 53.75%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+
+    }
+
+    /* background-color Scheme */
+    .gradient {
+        width: 100vw;
+        height: 92.5vh;
+        background: linear-gradient(334deg, #ac3b61, #123c69, #bab2b5, #eee2dc, #edc7b7);
+        background-size: 180% 180%;
+        animation: gradient-animation 10s ease infinite;
+    }
+
+    @keyframes gradient-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+</style>
+</html>
