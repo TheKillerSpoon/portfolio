@@ -25,9 +25,14 @@
     <div class="gradient">
         <div class="middle-text">
             <div class="top-text">
-                <h1>INTRO UGE</h1>
+                <h1>HOME</h1>
             </div>
-            <img src="C:/Users/kaspe/GF1/Portfolio/Billeder/plakat.png" class="Billeder" height="500">
+            <div class="description">
+                <p>Hej mit navn er Kasper stokbro</p>
+                <p>Jeg har lavet et Portfolio fra mit grundforløb 1 hos hansenberg.</p>
+                <p>Her kommer du til at se de emner jeg har haft igennem de sidste 20 uger.</p>
+            </div> 
+            <img src="C:/Users/kaspe/GF1/Portfolio/Billeder/profil.png" height="500">
         </div>
     </div>
 
@@ -44,10 +49,29 @@
 
     /* Content box */
 
+    p {
+        font-family: "Times New Roman";
+        font-size: 20px;
+    }
+    
+    .description {
+        width: 35vw;
+        height: 70vh;
+        position: absolute;
+        outline-style: solid;
+        outline-color: grey;
+        box-shadow: 10px 10px 5px rgba(0,0,0,0.24);
+        left: 90%;
+        top: 50%;
+        transform: translate(-90% ,-50%);
+    }
+
     .top-text {
         position: absolute;
         text-align: center;
+        font-family: "Times New Roman";
         left: 50%;
+        transform: translate(-50%);
 
     }
 
@@ -57,10 +81,17 @@
 
 
     img {
-        position: relative;
+        position: absolute;
+        outline-style: solid;
+        outline-color: grey;
+        box-shadow: 10px 10px 5px rgba(0,0,0,0.24);
+        left: 10%;
+        top: 50%;
+        transform: translate(-10% ,-50%);
         
 
     }
+
 
     /* Navigation Bar */
     nav {
@@ -103,10 +134,10 @@
 
     a:nth-child(1) {
         width: 5vw;
+        cursor: not-allowed;
     }
     a:nth-child(2) {
         width: 5vw;
-        cursor: not-allowed;
     }
     a:nth-child(3) {
         width: 8vw;
@@ -130,18 +161,18 @@
         width: 7vw;
     }
 
-    /* Pressed button */
+    /*pressed button*/
 
-    nav a:nth-child(2) {
+    nav a:nth-child(1) {
         background-color: #ac3b61;
         box-shadow: 10px 10px 5px rgba(0,0,0,0.48) inset;
     }
 
-    /* Nav bar animation */
+    /*Nav bar animation*/
 
-    nav.start-home, a:nth-child(1):hover~.animation {
+    nav.start-home, a:nth-child(2):hover~.animation {
         width: 5vw;
-        left: 17%;
+        left: 22%;
         background-color: #15467a;
         box-shadow: 0 0px 16px 0 rgba(0,0,0,0.24);
     }
