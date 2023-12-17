@@ -36,14 +36,27 @@
                 <p>(Du kan selv prøve og gætte, hvilken en der er den gode og den dårlige ;D)</p>
 
             </div>
-            <iframe width="200" class="vid1" src="https://www.youtube.com/watch?v=i9IkXI9NW54">
-            </iframe>
-            <iframe width="200" class="vid2" src="https://www.youtube.com/watch?v=Gh4Onya4qmM">
+            <img onclick="web(1);" src="god.png" class="vid1" width="200">
+            <img onclick="web(2);" src="dårlig.png" class="vid2" width="200">
             </iframe>
         </div>
     </div>
 
 </body>
+
+
+<script>
+
+    function web(p1) {
+        if (p1 == 1) {
+            location.replace("https://www.youtube.com/watch?v=i9IkXI9NW54");
+        } else {
+            location.replace("https://www.youtube.com/watch?v=Gh4Onya4qmM");
+        }
+    }
+
+
+</script>
 
 <style>
     /* Body */
