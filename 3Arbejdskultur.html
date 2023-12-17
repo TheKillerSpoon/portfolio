@@ -22,11 +22,26 @@
         </nav>
     </div>
 
+
     <div class="gradient">
         <div class="middle-text">
             <div class="top-text">
                 <h1>ARBEJDSKULTUR OG DIN VIRKSOMHED</h1>
             </div>
+            <div class="description">
+                <p>Uge 36-37</p>
+                <p>I disse uger havde vi om arbejdspladser, og om hvordan en god arbejdsplads vil fungere.
+                    Til højre har min gruppe, og jeg lavede to videoer om, hvordan en god og en dårlig arbejdsplads kan se ud
+                    </p>
+                <p>(Du kan selv prøve og gætte, hvilken en der er den gode og den dårlige ;D)</p>
+
+            </div>
+            <video width="200" controls class="vid1">
+                <source src="C:/Users/kaspe/GF1/Portfolio/Billeder/god.mp4">
+            </video>
+            <video width="200" controls class="vid2">
+                <source src="C:/Users/kaspe/GF1/Portfolio/Billeder/dårlig.mp4">
+            </video>
         </div>
     </div>
 
@@ -43,10 +58,48 @@
     
     /* Content box */
 
+    p {
+        font-family: "Times New Roman";
+        font-size: 20px;
+    }
+    
+    video {
+        width: 32.5%;
+        position: absolute;
+        outline-style: solid;
+        outline-color: grey;
+        box-shadow: 10px 10px 5px rgba(0,0,0,0.24);
+        left: 7.5%;
+    }
+
+    .vid1 {
+        top: 12.5%;
+        transform: translate(-10% ,-15%);
+    }
+
+    .vid2 {
+        top: 87.5%;
+        transform: translate(-10% ,-85%);
+    }
+    
+    .description {
+        width: 35vw;
+        height: 70vh;
+        position: absolute;
+        outline-style: solid;
+        outline-color: grey;
+        box-shadow: 10px 10px 5px rgba(0,0,0,0.24);
+        left: 90%;
+        top: 50%;
+        transform: translate(-90% ,-50%);
+    }
+
     .top-text {
         position: absolute;
         text-align: center;
+        font-family: "Times New Roman";
         left: 50%;
+        transform: translate(-50%);
 
     }
 
